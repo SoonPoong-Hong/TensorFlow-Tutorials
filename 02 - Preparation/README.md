@@ -99,3 +99,57 @@ C:\> jupyter notebook
 ![그림 2-3](images/fig0203.png)
 
 이처럼 주피터 노트북은 파이썬 코드를 반복해서 실행하고 중간중간 결과를 확인하기에 매우 좋은 프로그램입니다. 하지만 이 책은 기본적으로 명령 프롬프트에서 실행하는 것을 가정하므로 주피터 노트북에서는 실행되지 않는 경우도 있을 것입니다(그래프를 그리거나 실행이 오래 걸리는 경우 등). 이런 경우가 생기면 당황하지 말고 구글링을 하시면 쉽게 해결책을 찾을 수 있을 것입니다. 구글은 모든 엔지니어의 친구니까요.
+
+##windows에서 tensorflow를 사용하려면, 
+visual studio redistribution package 2015 를 깔아야 한다.
+https://www.microsoft.com/ko-kr/download/confirmation.aspx?id=48145
+
+안 그러면,  아래와 같은 에러가 난다.
+근데, 문제는, 사무실에서 깔때는 정상적으로 깔렸다는 것인데, 사무실에서는 VS 2015 라이브러리가 깔려있었나보다.
+
+```
+I:\git\TensorFlow-Tutorials\03 - TensorFlow Basic>python "01 - Basic.py"
+Traceback (most recent call last):
+  File "C:\dev_others\python\Python36\lib\site-packages\tensorflow\python\pywrap_tensorflow.py", line 58, in <module>
+    from tensorflow.python.pywrap_tensorflow_internal import *
+  File "C:\dev_others\python\Python36\lib\site-packages\tensorflow\python\pywrap_tensorflow_internal.py", line 18, in <module>
+    _pywrap_tensorflow_internal = swig_import_helper()
+  File "C:\dev_others\python\Python36\lib\site-packages\tensorflow\python\pywrap_tensorflow_internal.py", line 17, in swig_import_
+helper
+    return importlib.import_module(mname)
+  File "C:\dev_others\python\Python36\lib\importlib\__init__.py", line 126, in import_module
+    return _bootstrap._gcd_import(name[level:], package, level)
+ImportError: DLL load failed: 지정된 모듈을 찾을 수 없습니다.
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "01 - Basic.py", line 2, in <module>
+    import tensorflow as tf
+  File "C:\dev_others\python\Python36\lib\site-packages\tensorflow\__init__.py", line 22, in <module>
+    from tensorflow.python import pywrap_tensorflow  # pylint: disable=unused-import
+  File "C:\dev_others\python\Python36\lib\site-packages\tensorflow\python\__init__.py", line 49, in <module>
+    from tensorflow.python import pywrap_tensorflow
+  File "C:\dev_others\python\Python36\lib\site-packages\tensorflow\python\pywrap_tensorflow.py", line 74, in <module>
+    raise ImportError(msg)
+ImportError: Traceback (most recent call last):
+  File "C:\dev_others\python\Python36\lib\site-packages\tensorflow\python\pywrap_tensorflow.py", line 58, in <module>
+    from tensorflow.python.pywrap_tensorflow_internal import *
+  File "C:\dev_others\python\Python36\lib\site-packages\tensorflow\python\pywrap_tensorflow_internal.py", line 18, in <module>
+    _pywrap_tensorflow_internal = swig_import_helper()
+  File "C:\dev_others\python\Python36\lib\site-packages\tensorflow\python\pywrap_tensorflow_internal.py", line 17, in swig_import_
+helper
+    return importlib.import_module(mname)
+  File "C:\dev_others\python\Python36\lib\importlib\__init__.py", line 126, in import_module
+    return _bootstrap._gcd_import(name[level:], package, level)
+ImportError: DLL load failed: 지정된 모듈을 찾을 수 없습니다.
+
+
+Failed to load the native TensorFlow runtime.
+
+See https://www.tensorflow.org/install/install_sources#common_installation_problems
+
+for some common reasons and solutions.  Include the entire stack trace
+above this error message when asking for help.
+
+```
