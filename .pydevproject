@@ -2,4 +2,17 @@
 <?eclipse-pydev version="1.0"?><pydev_project>
 <pydev_property name="org.python.pydev.PYTHON_PROJECT_INTERPRETER">Default</pydev_property>
 <pydev_property name="org.python.pydev.PYTHON_PROJECT_VERSION">python interpreter</pydev_property>
+<pydev_pathproperty name="org.python.pydev.PROJECT_SOURCE_PATH">
+<path>/${PROJECT_DIR_NAME}/03 - TensorFlow Basic</path>
+<path>/${PROJECT_DIR_NAME}/04 - Neural Network Basic</path>
+<path>/${PROJECT_DIR_NAME}/05 - TensorBoard, Saver</path>
+<path>/${PROJECT_DIR_NAME}/06 - MNIST</path>
+<path>/${PROJECT_DIR_NAME}/07 - CNN</path>
+<path>/${PROJECT_DIR_NAME}/08 - Autoencoder</path>
+<path>/${PROJECT_DIR_NAME}/09 - GAN</path>
+<path>/${PROJECT_DIR_NAME}/10 - RNN</path>
+<path>/${PROJECT_DIR_NAME}/11 - Inception</path>
+<path>/${PROJECT_DIR_NAME}/12 - DQN</path>
+<path>/${PROJECT_DIR_NAME}/99 - examples</path>
+</pydev_pathproperty>
 </pydev_project>
