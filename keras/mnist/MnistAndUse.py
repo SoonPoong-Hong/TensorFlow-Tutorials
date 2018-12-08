@@ -44,10 +44,7 @@ loss_and_metrics = model.evaluate(x_test, y_test, batch_size=32)
 print('')
 print('loss_and_metrics : ' + str(loss_and_metrics))
 
-# 6. 모델 사용하기
-xhat_idx = np.random.choice(x_test.shape[0], 5)
-xhat = x_test[xhat_idx]
-yhat = model.predict_classes(xhat)
+# 6. 모델 저장하기
+from keras.models import load_model
+model.save('mnist_mlp_model.h5')
 
-for i in range(5):
-    print('True : ' + str(argmax(y_test[xhat_idx[i]])) + ', Predict : ' + str(yhat[i]))
